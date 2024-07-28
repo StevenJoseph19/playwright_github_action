@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('Github', async ({ page }) => {
+  test.setTimeout(120000);
+
   await page.goto('https://github.com/');
 
   await expect(page).toHaveTitle('GitHub: Let’s build from here · GitHub');
